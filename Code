@@ -3,6 +3,7 @@ library(tidyverse)
 library(magick)
 set.seed(2)
 
+#Creating the eyes
 colors <- list(c("#036d87", "#050914"), "#070B18", "#fafafa","#070B18")
 
 canvas_planet(colors, radius = c(500, 150, 25, 10),
@@ -56,6 +57,7 @@ a%>%image_annotate("@annapurani93", size = 12, color = "white", location = "+200
 a1%>%image_annotate("@annapurani93", size = 12, color = "white", location = "+200+280")->a1
 a2%>%image_annotate("@annapurani93", size = 12, color = "white", location = "+200+280")->a2
 a3%>%image_annotate("@annapurani93", size = 12, color = "white", location = "+200+280")->a3
+
 #To save the final image
 image_write(a, path = "final11.png", format = "png") 
 image_write(a1, path = "final12.png", format = "png") 
